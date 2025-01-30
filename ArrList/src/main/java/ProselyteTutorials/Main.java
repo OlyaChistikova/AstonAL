@@ -1,8 +1,15 @@
 package ProselyteTutorials;
 
 import java.util.Comparator;
-
+/**
+ * Класс для тестирования и демонстрации работы динамического списка.
+ */
 public class Main {
+    /**
+     * Главный метод, который запускает программу.
+     *
+     * @param args аргументы командной строки (не используются).
+     */
     public static void main(String[] args) {
         // Создаем экземпляр нашего списка для целых чисел
         MyArrayListImpl<Integer> myList = new MyArrayListImpl<>();
@@ -42,7 +49,7 @@ public class Main {
         myList.add(30);
         myList.add(10);
 
-        // Квакий сортировка
+        // Quicksort сортировка
         Comparator<Integer> comparator = (a, b) -> a - b;
         myList.quicksort(0, myList.size() - 1, comparator);
 
